@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QA Login Demo</title>
+</head>
+<body>
+
+    <h2>QA Login Demo</h2>
+
+    <label>Username:</label>
+    <input type="text" id="username" placeholder="Enter username">
+    <br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password" placeholder="Enter password">
+    <br><br>
+
+    <button onclick="login()">Login</button>
+
+    <p id="message"></p>
+
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const message = document.getElementById("message");
+
+            if (username === "qauser" && password === "qa123") {
+                message.innerText = "Login Successful";
+            } else {
+                message.innerText = "Invalid Username or Password";
+            }
+        }
+    </script>
+
+</body>
+</html>
